@@ -3,7 +3,7 @@
 </p>
 
 # LUAutocompleteView
-Highly configurable autocomplete view that is attachable to any `UITextField`
+Easy to use and highly configurable autocomplete view that is attachable to any `UITextField`
 
 [![Build Status](http://img.shields.io/travis/LaurentiuUngur/LUAutocompleteView/master.svg?style=flat)](https://travis-ci.org/LaurentiuUngur/LUAutocompleteView)
 [![Pod Version](http://img.shields.io/cocoapods/v/LUAutocompleteView.svg?style=flat)](http://cocoadocs.org/docsets/LUAutocompleteView/)

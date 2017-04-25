@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "LUAutocompleteView"
   s.version      = "1.0.0"
   s.summary      = "Highly configurable autocomplete view that is attachable to any UITextField"
-  s.description  = "Highly configurable autocomplete view that is attachable to any UITextField"
+  s.description  = "Easy to use and highly configurable autocomplete view that is attachable to any UITextField"
 
   s.homepage     = "https://github.com/LaurentiuUngur/LUAutocompleteView"
   s.license      = { :type => "MIT", :file => "LICENSE" }
