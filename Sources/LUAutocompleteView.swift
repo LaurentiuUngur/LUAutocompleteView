@@ -15,6 +15,7 @@ open class LUAutocompleteView: UIView {
     /// The object that acts as the delegate of the autocomplete view.
     public weak var delegate: LUAutocompleteViewDelegate?
 
+    /// Default value is `0.4`.
     public var throttleTime: TimeInterval = 0.4
     /// The maximum height of autocomplete view. Default value is `200.0`.
     public var maximumHeight: CGFloat = 200.0
@@ -39,6 +40,8 @@ open class LUAutocompleteView: UIView {
     /** A `LUAutocompleteTableViewCell` subclass that will be used to show a text suggestion.
     Set your own in order to customise the appearance.
     Default value is `nil`, which means the default one will be used.
+     
+    - Note: `textAttributes` will be ignored if this property is not `nil`
     */
     public var autocompleteCell: LUAutocompleteTableViewCell.Type? {
         didSet {
@@ -50,7 +53,7 @@ open class LUAutocompleteView: UIView {
             tableView.reloadData()
         }
     }
-    /// The height of each row (that is, table cell) in the autocomplete table view.
+    /// The height of each row (that is, table cell) in the autocomplete table view. Default value is `40.0`.
     public var rowHeight: CGFloat = 40.0 {
         didSet {
             tableView.rowHeight = rowHeight

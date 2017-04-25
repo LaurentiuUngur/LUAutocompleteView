@@ -16,4 +16,7 @@
    <FileRef
       location = "group:LUAutocompleteViewExample/LUAutocompleteViewExample.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:LUAutocompleteViewExample/Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>

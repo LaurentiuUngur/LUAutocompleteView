@@ -1,0 +1,16 @@
+PODS:
+  - LUAutocompleteView (1.0.0)
+
+DEPENDENCIES:
+  - LUAutocompleteView (from `../`)
+
+EXTERNAL SOURCES:
+  LUAutocompleteView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LUAutocompleteView: 53498b3a0517d37daeedd329b772ae2d1de6f425
+
+PODFILE CHECKSUM: 40282ae2ff07d3e319d589b0f5e96d28eda40519
+
+COCOAPODS: 1.2.1

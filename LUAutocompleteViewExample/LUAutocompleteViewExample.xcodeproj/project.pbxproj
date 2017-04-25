@@ -12,9 +12,13 @@
 		CF2B73581EAE8A7E009056D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B73561EAE8A7E009056D2 /* Main.storyboard */; };
 		CF2B735A1EAE8A7E009056D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2B73591EAE8A7E009056D2 /* Assets.xcassets */; };
 		CF2B735D1EAE8A7E009056D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B735B1EAE8A7E009056D2 /* LaunchScreen.storyboard */; };
+		CF9218171EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9218161EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift */; };
+		DAAE3ABA37E1329993615571 /* Pods_LUAutocompleteViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3519B1C31FF754698F9D5815 /* Pods_LUAutocompleteViewExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3519B1C31FF754698F9D5815 /* Pods_LUAutocompleteViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUAutocompleteViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49312554D65D20A7807D4822 /* Pods-LUAutocompleteViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAutocompleteViewExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample.release.xcconfig"; sourceTree = "<group>"; };
 		CF2B734F1EAE8A7E009056D2 /* LUAutocompleteViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LUAutocompleteViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2B73521EAE8A7E009056D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF2B73541EAE8A7E009056D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		CF2B73591EAE8A7E009056D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF2B735C1EAE8A7E009056D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2B735E1EAE8A7E009056D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9218161EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAutocompleteTableViewCell.swift; sourceTree = "<group>"; };
+		E5F89EEF1AB04215B2ED5198 /* Pods-LUAutocompleteViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAutocompleteViewExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAE3ABA37E1329993615571 /* Pods_LUAutocompleteViewExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053A84D7D7257D43AFC50AE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5F89EEF1AB04215B2ED5198 /* Pods-LUAutocompleteViewExample.debug.xcconfig */,
+				49312554D65D20A7807D4822 /* Pods-LUAutocompleteViewExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8042FB56ABC4E4E45B718B52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3519B1C31FF754698F9D5815 /* Pods_LUAutocompleteViewExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF2B73461EAE8A7E009056D2 = {
 			isa = PBXGroup;
 			children = (
 				CF2B73511EAE8A7E009056D2 /* LUAutocompleteViewExample */,
 				CF2B73501EAE8A7E009056D2 /* Products */,
+				053A84D7D7257D43AFC50AE5 /* Pods */,
+				8042FB56ABC4E4E45B718B52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				CF2B73521EAE8A7E009056D2 /* AppDelegate.swift */,
-				CF2B73541EAE8A7E009056D2 /* ViewController.swift */,
-				CF2B73561EAE8A7E009056D2 /* Main.storyboard */,
 				CF2B73591EAE8A7E009056D2 /* Assets.xcassets */,
-				CF2B735B1EAE8A7E009056D2 /* LaunchScreen.storyboard */,
+				CF9218161EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift */,
 				CF2B735E1EAE8A7E009056D2 /* Info.plist */,
+				CF2B735B1EAE8A7E009056D2 /* LaunchScreen.storyboard */,
+				CF2B73561EAE8A7E009056D2 /* Main.storyboard */,
+				CF2B73541EAE8A7E009056D2 /* ViewController.swift */,
 			);
 			path = LUAutocompleteViewExample;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF2B73611EAE8A7E009056D2 /* Build configuration list for PBXNativeTarget "LUAutocompleteViewExample" */;
 			buildPhases = (
+				E7E13DE0E97B0578A44EE583 /* [CP] Check Pods Manifest.lock */,
 				CF2B734B1EAE8A7E009056D2 /* Sources */,
 				CF2B734C1EAE8A7E009056D2 /* Frameworks */,
 				CF2B734D1EAE8A7E009056D2 /* Resources */,
+				06A3D2675D9A029E28DD230D /* [CP] Embed Pods Frameworks */,
+				29AC44700BEB5DB85C1E9D93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +161,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06A3D2675D9A029E28DD230D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29AC44700BEB5DB85C1E9D93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E13DE0E97B0578A44EE583 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF2B734B1EAE8A7E009056D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9218171EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift in Sources */,
 				CF2B73551EAE8A7E009056D2 /* ViewController.swift in Sources */,
 				CF2B73531EAE8A7E009056D2 /* AppDelegate.swift in Sources */,
 			);
@@ -260,6 +339,7 @@
 		};
 		CF2B73621EAE8A7E009056D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F89EEF1AB04215B2ED5198 /* Pods-LUAutocompleteViewExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LUAutocompleteViewExample/Info.plist;
@@ -273,6 +353,7 @@
 		};
 		CF2B73631EAE8A7E009056D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49312554D65D20A7807D4822 /* Pods-LUAutocompleteViewExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LUAutocompleteViewExample/Info.plist;
@@ -303,6 +384,7 @@
 				CF2B73631EAE8A7E009056D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

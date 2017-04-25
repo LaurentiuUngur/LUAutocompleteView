@@ -1,0 +1,6 @@
+framework module LUAutocompleteView {
+  umbrella header "LUAutocompleteView-umbrella.h"
+
+  export *
+  module * { export * }
+}
