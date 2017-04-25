@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs'
+
+platform :ios, '9.0'
+
+use_frameworks!
+
+xcodeproj 'LUAutocompleteViewExample'
+workspace '../LUAutocompleteView'
+
+target :LUAutocompleteViewExample do
+  pod 'LUAutocompleteView', :path => '../'
+end
