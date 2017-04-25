@@ -34,7 +34,7 @@ open class LUAutocompleteView: UIView {
             textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
             textField.addTarget(self, action: #selector(textFieldEditingEnded), for: .editingDidEnd)
 
-            updateFrame()
+            setupConstraints()
         }
     }
     /** A `LUAutocompleteTableViewCell` subclass that will be used to show a text suggestion.
@@ -67,7 +67,26 @@ open class LUAutocompleteView: UIView {
     fileprivate var elements = [String]() {
         didSet {
             tableView.reloadData()
-            updateFrame()
+            height = tableView.contentSize.height
+        }
+    }
+    private var heightConstraint: NSLayoutConstraint?
+    private var height: CGFloat = 0 {
+        didSet {
+            guard height != oldValue else {
+                return
+            }
+
+            guard let superview = superview else {
+                heightConstraint?.constant = (height > maximumHeight) ? maximumHeight : height
+                return
+            }
+
+            superview.layoutIfNeeded()
+            UIView.animate(withDuration: 0.2) {
+                self.heightConstraint?.constant = (self.height > self.maximumHeight) ? self.maximumHeight : self.height
+                superview.layoutIfNeeded()
+            }
         }
     }
 
@@ -99,15 +118,6 @@ open class LUAutocompleteView: UIView {
         commonInit()
     }
 
-    // MARK: - Base Class Overrides
-
-    /// Lays out subviews
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-
-        updateFrame()
-    }
-
     // MARK: - Private Functions
 
     private func commonInit() {
@@ -123,14 +133,32 @@ open class LUAutocompleteView: UIView {
         tableView.bounces = false
     }
 
-    private func updateFrame() {
-        guard let textFieldFrame = textField?.frame else {
+    private func setupConstraints() {
+        guard let textField = textField else {
+            assertionFailure("Sanity check")
             return
         }
 
-        let height = CGFloat(elements.count) * rowHeight
-        frame = CGRect(x: textFieldFrame.origin.x, y: textFieldFrame.origin.y + textFieldFrame.height, width: textFieldFrame.width, height: height > maximumHeight ? maximumHeight : height)
-        tableView.frame = CGRect(origin: .zero, size: frame.size)
+        tableView.removeConstraints(tableView.constraints)
+        removeConstraints(self.constraints)
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
+
+        heightConstraint = heightAnchor.constraint(equalToConstant: 0)
+
+        let constraints = [
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            leadingAnchor.constraint(equalTo: textField.leadingAnchor),
+            trailingAnchor.constraint(equalTo: textField.trailingAnchor),
+            topAnchor.constraint(equalTo: textField.bottomAnchor),
+            heightConstraint!
+        ]
+
+        NSLayoutConstraint.activate(constraints)
     }
 
     @objc private func textFieldEditingChanged() {
@@ -154,7 +182,7 @@ open class LUAutocompleteView: UIView {
     }
 
     @objc private func textFieldEditingEnded() {
-        tableView.frame = .zero
+        height = 0
     }
 }
 
