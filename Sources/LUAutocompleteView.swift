@@ -15,7 +15,10 @@ open class LUAutocompleteView: UIView {
     /// The object that acts as the delegate of the autocomplete view.
     public weak var delegate: LUAutocompleteViewDelegate?
 
-    /// Default value is `0.4`.
+    /** The time interval responsible for regulating the rate of calling data source function.
+    If typing stops for a time interval greater than `throttleTime`, then the data source function will be called.
+    Default value is `0.4`.
+    */
     public var throttleTime: TimeInterval = 0.4
     /// The maximum height of autocomplete view. Default value is `200.0`.
     public var maximumHeight: CGFloat = 200.0
@@ -63,6 +66,7 @@ open class LUAutocompleteView: UIView {
     // MARK: - Private Properties
 
     private let tableView = UITableView()
+    private var heightConstraint: NSLayoutConstraint?
     fileprivate static let cellIdentifier = "AutocompleteCellIdentifier"
     fileprivate var elements = [String]() {
         didSet {
@@ -70,8 +74,7 @@ open class LUAutocompleteView: UIView {
             height = tableView.contentSize.height
         }
     }
-    private var heightConstraint: NSLayoutConstraint?
-    private var height: CGFloat = 0 {
+    fileprivate var height: CGFloat = 0 {
         didSet {
             guard height != oldValue else {
                 return
@@ -249,7 +252,8 @@ extension LUAutocompleteView: UITableViewDelegate {
             assertionFailure("Sanity check")
             return
         }
-        
+
+        height = 0
         textField?.text = elements[indexPath.row]
         delegate?.autocompleteView(self, didSelect: elements[indexPath.row])
     }

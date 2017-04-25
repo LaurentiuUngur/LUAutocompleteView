@@ -114,7 +114,7 @@ import UIKit
 import LUAutocompleteView
 
 final class CustomAutocompleteTableViewCell: LUAutocompleteTableViewCell {
-// MARK: - Base Class Overrides
+    // MARK: - Base Class Overrides
 
     override func set(text: String) {
         textLabel?.text = text
