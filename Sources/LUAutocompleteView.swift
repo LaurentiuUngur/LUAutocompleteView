@@ -22,6 +22,8 @@ open class LUAutocompleteView: UIView {
     public var throttleTime: TimeInterval = 0.4
     /// The maximum height of autocomplete view. Default value is `200.0`.
     public var maximumHeight: CGFloat = 200.0
+    /// A boolean value that determines whether the view should hide after a suggestion is selected. Default value is `true`.
+    public var shouldHideAfterSelecting = true
     /** The attributes for the text suggestions.
      
     - Note: This property will be ignored if `autocompleteCell` is not `nil`.
@@ -253,7 +255,9 @@ extension LUAutocompleteView: UITableViewDelegate {
             return
         }
 
-        height = 0
+        if shouldHideAfterSelecting {
+            height = 0
+        }
         textField?.text = elements[indexPath.row]
         delegate?.autocompleteView(self, didSelect: elements[indexPath.row])
     }
