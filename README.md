@@ -8,7 +8,7 @@ Easy to use and highly configurable autocomplete view that is attachable to any 
 [![Build Status](http://img.shields.io/travis/LaurentiuUngur/LUAutocompleteView/master.svg?style=flat)](https://travis-ci.org/LaurentiuUngur/LUAutocompleteView)
 [![Pod Version](http://img.shields.io/cocoapods/v/LUAutocompleteView.svg?style=flat)](https://cocoapods.org/pods/LUAutocompleteView/)
 ![language](https://img.shields.io/badge/Language-Swift3-8E44AD.svg)
-![Pod Platform](http://img.shields.io/cocoapods/p/LUAutocompleteView.svg?style=flat)]
+![Pod Platform](http://img.shields.io/cocoapods/p/LUAutocompleteView.svg?style=flat)
 [![Pod License](http://img.shields.io/cocoapods/l/LUAutocompleteView.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 ## Installation
