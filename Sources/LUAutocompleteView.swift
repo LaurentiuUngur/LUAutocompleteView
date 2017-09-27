@@ -28,7 +28,7 @@ open class LUAutocompleteView: UIView {
      
     - Note: This property will be ignored if `autocompleteCell` is not `nil`.
     */
-    public var textAttributes: [String: Any]?
+    public var textAttributes: [NSAttributedStringKey: Any]?
     /// The text field to which the autocomplete view will be attached.
     public weak var textField: UITextField? {
         didSet {
@@ -69,14 +69,14 @@ open class LUAutocompleteView: UIView {
 
     private let tableView = UITableView()
     private var heightConstraint: NSLayoutConstraint?
-    fileprivate static let cellIdentifier = "AutocompleteCellIdentifier"
-    fileprivate var elements = [String]() {
+    private static let cellIdentifier = "AutocompleteCellIdentifier"
+    private var elements = [String]() {
         didSet {
             tableView.reloadData()
             height = tableView.contentSize.height
         }
     }
-    fileprivate var height: CGFloat = 0 {
+    private var height: CGFloat = 0 {
         didSet {
             guard height != oldValue else {
                 return

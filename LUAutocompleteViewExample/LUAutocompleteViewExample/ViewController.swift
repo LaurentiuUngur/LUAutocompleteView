@@ -15,7 +15,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     private let autocompleteView = LUAutocompleteView()
 
-    fileprivate let elements = (1...100).map { "\($0)" }
+    private let elements = (1...100).map { "\($0)" }
 
     // MARK: - ViewController
 
