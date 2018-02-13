@@ -64,18 +64,19 @@ open class LUAutocompleteView: UIView {
             tableView.rowHeight = rowHeight
         }
     }
+    
+    public var elements = [String]() {
+        didSet {
+            tableView.reloadData()
+            height = tableView.contentSize.height
+        }
+    }
 
     // MARK: - Private Properties
 
     private let tableView = UITableView()
     private var heightConstraint: NSLayoutConstraint?
     private static let cellIdentifier = "AutocompleteCellIdentifier"
-    private var elements = [String]() {
-        didSet {
-            tableView.reloadData()
-            height = tableView.contentSize.height
-        }
-    }
     private var height: CGFloat = 0 {
         didSet {
             guard height != oldValue else {
