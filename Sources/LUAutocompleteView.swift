@@ -28,7 +28,7 @@ open class LUAutocompleteView: UIView {
      
     - Note: This property will be ignored if `autocompleteCell` is not `nil`.
     */
-    public var textAttributes: [NSAttributedStringKey: Any]?
+    public var textAttributes: [NSAttributedString.Key: Any]?
     /// The text field to which the autocomplete view will be attached.
     public weak var textField: UITextField? {
         didSet {

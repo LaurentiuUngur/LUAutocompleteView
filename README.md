@@ -23,7 +23,7 @@ Easy to use and highly configurable autocomplete view that is attachable to any 
 $ sudo gem install cocoapods
 ```
 
-> CocoaPods 1.4.0+ is required.
+> CocoaPods 1.6.0+ is required.
 
 To integrate `LUAutocompleteView` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -48,7 +48,7 @@ $ pod install
 You can use [Carthage](https://github.com/Carthage/Carthage) to install `LUAutocompleteView` by adding it to your `Cartfile`:
 
 ```
-github "LaurentiuUngur/LUAutocompleteView" ~> 2.0
+github "LaurentiuUngur/LUAutocompleteView" ~> 3.0
 ```
 
 Then run `carthage update`.
@@ -60,7 +60,7 @@ If this is your first time using Carthage in the project, you'll need to go thro
 To integrate using Apple's [Swift Package Manager](https://swift.org/package-manager), add the following as a dependency to your `Package.swift`:
 
 ```Swift
-.Package(url: "https://github.com/LaurentiuUngur/LUAutocompleteView", majorVersion: 2)
+.Package(url: "https://github.com/LaurentiuUngur/LUAutocompleteView", majorVersion: 3)
 ```
 
 Here's an example of `PackageDescription`:
@@ -70,7 +70,7 @@ import PackageDescription
 
 let package = Package(name: "MyApp",
     dependencies: [
-        .Package(url: "https://github.com/LaurentiuUngur/LUAutocompleteView", majorVersion: 1)
+        .Package(url: "https://github.com/LaurentiuUngur/LUAutocompleteView", majorVersion: 3)
     ])
 ```
 
@@ -148,8 +148,8 @@ autocompleteView.autocompleteCell = CustomAutocompleteTableViewCell.self
 
 ## Requirements
 
-- Xcode 9.0+
-- Swift 4.0+
+- Xcode 10.0+
+- Swift 4.2+
 - iOS 9.0+
 
 ## Author

@@ -1,6 +1,6 @@
 {
   "name": "LUAutocompleteView",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "summary": "Highly configurable autocomplete view that is attachable to any UITextField",
   "description": "Easy to use and highly configurable autocomplete view that is attachable to any UITextField",
   "homepage": "https://github.com/LaurentiuUngur/LUAutocompleteView",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/LaurentiuUngur/LUAutocompleteView.git",
-    "tag": "2.0.0"
+    "tag": "3.0.0"
   },
   "authors": {
     "Laurentiu Ungur": "laurentyu1995@gmail.com"
