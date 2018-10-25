@@ -200,6 +200,7 @@ open class LUAutocompleteView: UIView {
 
     @objc private func textFieldEditingEnded() {
         height = 0
+        delegate?.autocompleteViewEditingEnded(self)
     }
 }
 
