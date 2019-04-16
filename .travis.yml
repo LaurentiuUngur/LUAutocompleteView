@@ -1,5 +1,5 @@
-language: objective-c
-osx_image: xcode10
+language: swift
+osx_image: xcode10.2
 
 env:
   global:
@@ -9,8 +9,8 @@ env:
 before_install:
     - env
     - locale
-    - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+    - gem install cocoapods --pre
+    - gem install xcpretty
     - pod --version
     - pod setup --silent
     - pod repo update --silent
