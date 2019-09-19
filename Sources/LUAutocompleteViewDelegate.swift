@@ -17,4 +17,11 @@ public protocol LUAutocompleteViewDelegate: class {
         - text: A string that was selected in autocomplete view.
     */
     func autocompleteView(_ autocompleteView: LUAutocompleteView, didSelect text: String)
+
+    /** Tells the delegate the editing of text view ended
+
+     - Parameters:
+     - autocompleteView: An autocomplete view object informing the delegate
+     */
+    func autocompleteViewEditingEnded(_ autocompleteView: LUAutocompleteView)
 }
