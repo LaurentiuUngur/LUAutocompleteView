@@ -26,6 +26,9 @@ open class LUAutocompleteView: UIView {
     public var maximumHeight: CGFloat = 200.0
     /// A boolean value that determines whether the view should hide after a suggestion is selected. Default value is `true`.
     public var shouldHideAfterSelecting = true
+    /// A boolean value that determines whether the view should show even when no text has been digited. When text is empty, you can return a list of elements in order to show suggestions if this value is set to `true`. Default value is `false`.
+    public var showElementsWithEmptyText = false
+
     /** The attributes for the text suggestions.
      
     - Note: This property will be ignored if `autocompleteCell` is not `nil`.
@@ -38,6 +41,7 @@ open class LUAutocompleteView: UIView {
 
             textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
             textField.addTarget(self, action: #selector(textFieldEditingEnded), for: .editingDidEnd)
+            textField.addTarget(self, action: #selector(textFieldEditingBegan), for: .editingDidBegin)
 
             setupConstraints()
         }
@@ -172,7 +176,7 @@ open class LUAutocompleteView: UIView {
     @objc private func getElements() {
         guard let dataSource else { return }
 
-        guard let text = textField?.text, !text.isEmpty else {
+        guard let text = textField?.text, !text.isEmpty || showElementsWithEmptyText else {
             elements.removeAll()
             return
         }
@@ -184,6 +188,14 @@ open class LUAutocompleteView: UIView {
 
     @objc private func textFieldEditingEnded() {
         height = 0
+        delegate?.autocompleteViewEditingEnded(self)
+    }
+    
+    @objc private func textFieldEditingBegan() {
+        guard showElementsWithEmptyText else { return }
+        
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(getElements), object: nil)
+        perform(#selector(getElements), with: nil, afterDelay: throttleTime)
     }
 }
 
@@ -199,7 +211,7 @@ extension LUAutocompleteView: UITableViewDataSource {
     - Returns: The number of rows in `section`.
     */
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        !(textField?.text?.isEmpty ?? true) ? elements.count : 0
+        elements.count
     }
 
     /** Asks the data source for a cell to insert in a particular location of the table view.
