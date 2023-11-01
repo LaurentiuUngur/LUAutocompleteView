@@ -11,7 +11,7 @@ import Foundation
 /** The `LUAutocompleteViewDataSource` protocol is adopted by an object that mediates the application’s data model for a `LUAutocompleteView` object.
 The data source provides the autocomplete view object with the information it needs to display.
 */
-public protocol LUAutocompleteViewDataSource: class {
+public protocol LUAutocompleteViewDataSource: AnyObject {
     /** Asks the data source to provide elements that should be displayed for given text.
 
     - Parameters:

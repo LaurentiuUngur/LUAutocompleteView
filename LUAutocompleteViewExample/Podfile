@@ -1,11 +1,8 @@
-source 'https://github.com/CocoaPods/Specs'
-
-platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.0'
 
 use_frameworks!
-
-xcodeproj 'LUAutocompleteViewExample'
-workspace '../LUAutocompleteView'
+inhibit_all_warnings!
 
 target :LUAutocompleteViewExample do
   pod 'LUAutocompleteView', :path => '../'

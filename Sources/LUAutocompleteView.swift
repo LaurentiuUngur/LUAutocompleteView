@@ -6,6 +6,8 @@
 //  Copyright © 2017 Laurentiu Ungur. All rights reserved.
 //
 
+import UIKit
+
 /// Highly configurable autocomplete view that is attachable to any `UITextField`.
 open class LUAutocompleteView: UIView {
     // MARK: - Public Properties

@@ -3,22 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ED5063374321A526C9BD445 /* Pods_LUAutocompleteViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9522797F532BDFC9E806F79 /* Pods_LUAutocompleteViewExample.framework */; };
 		CF2B73531EAE8A7E009056D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B73521EAE8A7E009056D2 /* AppDelegate.swift */; };
 		CF2B73551EAE8A7E009056D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B73541EAE8A7E009056D2 /* ViewController.swift */; };
 		CF2B73581EAE8A7E009056D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B73561EAE8A7E009056D2 /* Main.storyboard */; };
 		CF2B735A1EAE8A7E009056D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2B73591EAE8A7E009056D2 /* Assets.xcassets */; };
 		CF2B735D1EAE8A7E009056D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B735B1EAE8A7E009056D2 /* LaunchScreen.storyboard */; };
 		CF9218171EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9218161EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift */; };
-		DAAE3ABA37E1329993615571 /* Pods_LUAutocompleteViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3519B1C31FF754698F9D5815 /* Pods_LUAutocompleteViewExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3519B1C31FF754698F9D5815 /* Pods_LUAutocompleteViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUAutocompleteViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49312554D65D20A7807D4822 /* Pods-LUAutocompleteViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAutocompleteViewExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample.release.xcconfig"; sourceTree = "<group>"; };
+		20BE2DE0E155D4CF2C477078 /* Pods-LUAutocompleteViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAutocompleteViewExample.debug.xcconfig"; path = "Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C9522797F532BDFC9E806F79 /* Pods_LUAutocompleteViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUAutocompleteViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2B734F1EAE8A7E009056D2 /* LUAutocompleteViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LUAutocompleteViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2B73521EAE8A7E009056D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF2B73541EAE8A7E009056D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +27,7 @@
 		CF2B735C1EAE8A7E009056D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2B735E1EAE8A7E009056D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF9218161EAF63B300D754B0 /* CustomAutocompleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAutocompleteTableViewCell.swift; sourceTree = "<group>"; };
-		E5F89EEF1AB04215B2ED5198 /* Pods-LUAutocompleteViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAutocompleteViewExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample.debug.xcconfig"; sourceTree = "<group>"; };
+		D9E51CCCBD3A5F6C4B93C781 /* Pods-LUAutocompleteViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUAutocompleteViewExample.release.xcconfig"; path = "Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,26 +35,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAE3ABA37E1329993615571 /* Pods_LUAutocompleteViewExample.framework in Frameworks */,
+				5ED5063374321A526C9BD445 /* Pods_LUAutocompleteViewExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		053A84D7D7257D43AFC50AE5 /* Pods */ = {
+		839064B8D3ACDB690BA498BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E5F89EEF1AB04215B2ED5198 /* Pods-LUAutocompleteViewExample.debug.xcconfig */,
-				49312554D65D20A7807D4822 /* Pods-LUAutocompleteViewExample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8042FB56ABC4E4E45B718B52 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3519B1C31FF754698F9D5815 /* Pods_LUAutocompleteViewExample.framework */,
+				C9522797F532BDFC9E806F79 /* Pods_LUAutocompleteViewExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,8 +55,8 @@
 			children = (
 				CF2B73511EAE8A7E009056D2 /* LUAutocompleteViewExample */,
 				CF2B73501EAE8A7E009056D2 /* Products */,
-				053A84D7D7257D43AFC50AE5 /* Pods */,
-				8042FB56ABC4E4E45B718B52 /* Frameworks */,
+				FC42C9B9F0C60C77B3D4F696 /* Pods */,
+				839064B8D3ACDB690BA498BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +82,16 @@
 			path = LUAutocompleteViewExample;
 			sourceTree = "<group>";
 		};
+		FC42C9B9F0C60C77B3D4F696 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20BE2DE0E155D4CF2C477078 /* Pods-LUAutocompleteViewExample.debug.xcconfig */,
+				D9E51CCCBD3A5F6C4B93C781 /* Pods-LUAutocompleteViewExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,11 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF2B73611EAE8A7E009056D2 /* Build configuration list for PBXNativeTarget "LUAutocompleteViewExample" */;
 			buildPhases = (
-				E7E13DE0E97B0578A44EE583 /* [CP] Check Pods Manifest.lock */,
+				AA905CB548A1D8BDBE27CB62 /* [CP] Check Pods Manifest.lock */,
 				CF2B734B1EAE8A7E009056D2 /* Sources */,
 				CF2B734C1EAE8A7E009056D2 /* Frameworks */,
 				CF2B734D1EAE8A7E009056D2 /* Resources */,
-				06A3D2675D9A029E28DD230D /* [CP] Embed Pods Frameworks */,
+				6BF85B7D76F3C6B405ED1367 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -119,8 +120,9 @@
 		CF2B73471EAE8A7E009056D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Laurentiu Ungur";
 				TargetAttributes = {
 					CF2B734E1EAE8A7E009056D2 = {
@@ -131,7 +133,7 @@
 				};
 			};
 			buildConfigurationList = CF2B734A1EAE8A7E009056D2 /* Build configuration list for PBXProject "LUAutocompleteViewExample" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -162,34 +164,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06A3D2675D9A029E28DD230D /* [CP] Embed Pods Frameworks */ = {
+		6BF85B7D76F3C6B405ED1367 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LUAutocompleteView/LUAutocompleteView.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LUAutocompleteView.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LUAutocompleteViewExample/Pods-LUAutocompleteViewExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7E13DE0E97B0578A44EE583 /* [CP] Check Pods Manifest.lock */ = {
+		AA905CB548A1D8BDBE27CB62 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LUAutocompleteViewExample-checkManifestLockResult.txt",
 			);
@@ -237,6 +242,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -259,6 +265,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -269,6 +276,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -283,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -298,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -320,6 +329,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -330,6 +340,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -338,10 +349,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -350,12 +362,18 @@
 		};
 		CF2B73621EAE8A7E009056D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5F89EEF1AB04215B2ED5198 /* Pods-LUAutocompleteViewExample.debug.xcconfig */;
+			baseConfigurationReference = 20BE2DE0E155D4CF2C477078 /* Pods-LUAutocompleteViewExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = LUAutocompleteViewExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = LU.LUAutocompleteViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -364,12 +382,18 @@
 		};
 		CF2B73631EAE8A7E009056D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49312554D65D20A7807D4822 /* Pods-LUAutocompleteViewExample.release.xcconfig */;
+			baseConfigurationReference = D9E51CCCBD3A5F6C4B93C781 /* Pods-LUAutocompleteViewExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = LUAutocompleteViewExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = LU.LUAutocompleteViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
