@@ -60,6 +60,13 @@ If you prefer not to use either of the before mentioned dependency managers, you
 ```Swift
 import LUAutocompleteView
 ```
+
+* Add autocomplete view as subview
+
+```Swift
+view.addSubview(autocompleteView)
+```     
+   
 * Assign to `textField` property the text field to which the autocomplete view you want be attached.
 
 ```Swift
