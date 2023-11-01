@@ -34,9 +34,7 @@ open class LUAutocompleteView: UIView {
     /// The text field to which the autocomplete view will be attached.
     public weak var textField: UITextField? {
         didSet {
-            guard let textField = textField else {
-                return
-            }
+            guard let textField else { return }
 
             textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
             textField.addTarget(self, action: #selector(textFieldEditingEnded), for: .editingDidEnd)
@@ -52,9 +50,7 @@ open class LUAutocompleteView: UIView {
     */
     public var autocompleteCell: LUAutocompleteTableViewCell.Type? {
         didSet {
-            guard let autocompleteCell = autocompleteCell else {
-                return
-            }
+            guard let autocompleteCell else { return }
 
             tableView.register(autocompleteCell, forCellReuseIdentifier: LUAutocompleteView.cellIdentifier)
             tableView.reloadData()
@@ -84,14 +80,14 @@ open class LUAutocompleteView: UIView {
                 return
             }
 
-            guard let superview = superview else {
+            guard let superview else {
                 heightConstraint?.constant = (height > maximumHeight) ? maximumHeight : height
                 return
             }
 
             superview.layoutIfNeeded()
             UIView.animate(withDuration: 0.2) {
-                self.heightConstraint?.constant = (self.height > self.maximumHeight) ? self.maximumHeight : self.height
+                self.heightConstraint?.constant = min(self.height, self.maximumHeight)
                 superview.layoutIfNeeded()
             }
         }
@@ -141,7 +137,7 @@ open class LUAutocompleteView: UIView {
     }
 
     private func setupConstraints() {
-        guard let textField = textField else {
+        guard let textField else {
             assertionFailure("Sanity check")
             return
         }
@@ -174,17 +170,15 @@ open class LUAutocompleteView: UIView {
     }
 
     @objc private func getElements() {
-        guard let dataSource = dataSource else {
-            return
-        }
+        guard let dataSource else { return }
 
         guard let text = textField?.text, !text.isEmpty else {
             elements.removeAll()
             return
         }
 
-        dataSource.autocompleteView(self, elementsFor: text) { [weak self] elements in
-            self?.elements = elements
+        dataSource.autocompleteView(self, elementsFor: text) { [weak self] in
+            self?.elements = $0
         }
     }
 
@@ -205,7 +199,7 @@ extension LUAutocompleteView: UITableViewDataSource {
     - Returns: The number of rows in `section`.
     */
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return !(textField?.text?.isEmpty ?? true) ? elements.count : 0
+        !(textField?.text?.isEmpty ?? true) ? elements.count : 0
     }
 
     /** Asks the data source for a cell to insert in a particular location of the table view.
@@ -229,7 +223,7 @@ extension LUAutocompleteView: UITableViewDataSource {
 
         let text = elements[indexPath.row]
 
-        guard autocompleteCell != nil, let customCell = cell as? LUAutocompleteTableViewCell  else {
+        guard autocompleteCell != nil, let customCell = cell as? LUAutocompleteTableViewCell else {
             cell.textLabel?.attributedText = NSAttributedString(string: text, attributes: textAttributes)
             cell.selectionStyle = .none
 
